@@ -194,6 +194,31 @@ hr {
   margin: 20px 24px;
 }
 
+.calendar {
+  margin: 46px auto;
+  text-align: center;
+  width: 587px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.days {
+  float: left;
+  margin: auto 29px 0;
+  color: rgba(51, 77, 110, 1);
+}
+
+.days-num {
+  float: left;
+  margin: 8px 33px 0;
+  color: rgba(51, 77, 110, 1);
+}
+
+.mon {
+  color: rgba(16, 156, 241, 1);
+}
+
 @media screen and (max-width: 960px) {
   .avatar-flex-container {
     flex-direction: column;
@@ -242,4 +267,12 @@ hr {
 
 #this-week {
   color: rgba(16, 156, 241, 1);
+}
+
+#blue-circle {
+  background-color: rgb(16, 156, 241);
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  width: 20px;
+  height: 20px;
 }

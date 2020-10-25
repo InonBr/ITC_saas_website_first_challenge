@@ -22,6 +22,34 @@
       href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Closed deals'],
+          ['1 Dec', 50],
+          ['', 100],
+          ['8 Dec', 170],
+          ['', 60],
+          ['16 Dec', 100],
+          ['', 160],
+          ['31 Dec', 150]
+        ]);
+
+        var options = {
+          curveType: 'function',
+          legend: { position: 'top' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
   </head>
 
   <body>
@@ -154,16 +182,23 @@
                 <a class="show_more-a-tag" href="#">Show more</a>
               </div>
             </div>
-            
-            
-            
           </div>
-          
           
           <div>
-            <div class="deals"><h1>Deals</h1></div>
-            <div class="tasks"><h1>Tasks</h1></div>
-          </div>
+            <div class="deals boxes">
+              <div class="tasks-completed-count-line">
+                <h3 class="deals-header">Deals</h3>
+                <p class="selected-week">Show: <span id="this-week">Monthly</span><i class="fas fa-sort-down tab"></i></p>
+              </div>
+
+              <hr />
+
+              <div id="curve_chart" class="curve-chart-styleing"></div>
+            </div>
+            
+            
+            <div class="tasks boxes"><h1>Tasks</h1></div>
+          
         </div>
       </div>
 

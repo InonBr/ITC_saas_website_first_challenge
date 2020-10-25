@@ -112,8 +112,9 @@ a:visited {
 }
 
 .boxes {
-  box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
   background-color: rgb(255, 255, 255);
+  box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
 }
 
 .tab {
@@ -334,6 +335,29 @@ a:visited {
   justify-content: center; /*horizontal align*/
   margin-top: 50px;
   color: rgb(16, 156, 241);
+}
+
+.deals {
+  width: 445px;
+  height: 344px;
+  margin-top: 35px;
+}
+
+.deals-header {
+  color: rgba(25, 42, 62, 1);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 16px 24px;
+}
+
+.curve_chart_styleing {
+  color: rgba(76, 88, 98, 1);
+  width: 365px;
+  height: 176px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 960px) {
